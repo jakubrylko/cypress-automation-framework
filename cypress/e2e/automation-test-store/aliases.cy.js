@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Alias and invoke', () => {
+describe('Aliases and invokes', () => {
     it('Validate a specific product', () => {
         cy.visit('https://www.automationteststore.com');
         cy.get("a[href*='product/category&path=']").contains('Hair Care').click();
