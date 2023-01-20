@@ -2,7 +2,7 @@ import AsHomepage_PO from "../../support/page-objects/automation-store/as-homepa
 import AsHairCare_PO from "../../support/page-objects/automation-store/as-haircare-po";
 /// <reference types="cypress" /> 
 
-describe('Add multiple items to basket', () => {
+describe('Add multiple items to the basket', () => {
     const asHomepage_PO = new AsHomepage_PO();
     const asHairCare_PO = new AsHairCare_PO();
     
