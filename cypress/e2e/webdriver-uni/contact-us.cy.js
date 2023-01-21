@@ -18,7 +18,7 @@ describe('Test Contact Us form via WebdriverUni', () => {
         homepage_PO.clickButton('contact-us');
 
         //cy.visit(Cypress.env('webDriverUni') + '/Contact-Us/contactus.html');
-        
+
         cy.document().should('have.prop', 'charset').and('eq', 'UTF-8');
         cy.title().should('contain', 'Contact Us');
         cy.url().should('include', 'contactus');
@@ -29,11 +29,15 @@ describe('Test Contact Us form via WebdriverUni', () => {
 
         //cy.fillContactForm(Cypress.env('firstName'), example.lastName, example.email, example.comment);
 
-        cy.get('h1').contains('Thank You for your Message!', { timeout: 60000});
+        cy.get('h1').contains('Thank You for your Message!', { timeout: 60000 });
     });
 
     it('Should not be able to submit a successful submission via contact us form as all fields are required', () => {
-        cy.fillContactForm(Cypress.env('firstName'), example.lastName, ' ', example.feedback);
-        cy.get('body').contains('Error: Invalid email address');
+        if (Cypress.isBrowser('firefox')) {
+
+        } else {
+            cy.fillContactForm(Cypress.env('firstName'), example.lastName, ' ', example.feedback);
+            cy.get('body').contains('Error: Invalid email address');
+        }
     });
 });

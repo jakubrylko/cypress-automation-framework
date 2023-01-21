@@ -9,14 +9,16 @@
     "chrome": "npx cypress run --browser chrome",
     "dashboard": "npx cypress run --record --key 3eaef696-2f49-4f48-bc35-eccec41f3e7d",
     "webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*",
-    "teststore": "npx cypress run --spec cypress/e2e/automation-test-store/*",
+    "teststore": "NO_COLOR=1 cypress run --spec cypress/e2e/automation-test-store/*",
+    "teststore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/* --record --key 3eaef696-2f49-4f48-bc35-eccec41f3e7d",
     "bdd": "npx cypress run --spec cypress/e2e/webdriver-uni/features/*.feature",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-results": "rm -rf cypress/results/* || true",
     "mocha-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
     "mocha-delete": "rm -rf mochawesome-report/* || true",
     "regression-pack": "npm run delete-results && npm run mocha-delete && npm run teststore && npm run mocha-merge",
-    "staging": "npx cypress run --env configFile=staging"
+    "staging": "npx cypress run --env configFile=staging",
+    "multi-browser": "npm run teststore -- --browser firefox --headed && npm run teststore -- --browser chrome --headed"
   },
   "author": "Jakub Rylko",
   "license": "ISC",
