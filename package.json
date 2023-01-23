@@ -9,6 +9,7 @@
     "chrome": "NO_COLOR=1 cypress run --browser chrome",
     "dashboard": "NO_COLOR=1 cypress run --record --key 3eaef696-2f49-4f48-bc35-eccec41f3e7d",
     "webdriveruni": "NO_COLOR=1 cypress run --spec cypress/e2e/webdriver-uni/*",
+    "webdriveruni-dashboard": "NO_COLOR=1 cypress run --spec cypress/e2e/webdriver-uni/* --record --key 3eaef696-2f49-4f48-bc35-eccec41f3e7d --parallel",
     "teststore": "NO_COLOR=1 cypress run --spec cypress/e2e/automation-test-store/*",
     "teststore-dashboard": "NO_COLOR=1 cypress run --spec cypress/e2e/automation-test-store/* --record --key 3eaef696-2f49-4f48-bc35-eccec41f3e7d --parallel --browser chrome --headed",
     "bdd": "npx cypress run --spec cypress/e2e/webdriver-uni/features/*.feature",
