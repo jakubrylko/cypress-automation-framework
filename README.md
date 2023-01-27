@@ -4,7 +4,7 @@ In this project, I would like to share test automation framework that I have dev
 
 ## Content
 * [Automation Test Store](https://github.com/jakubrylko/cypress-automation-framework/tree/main/cypress/e2e/automation-test-store) - user interface tests created for the e-commerce test store. Link to the [app](https://www.automationteststore.com/).
-* [Web Driver Univeristy](https://github.com/jakubrylko/cypress-automation-framework/tree/main/cypress/e2e/webdriver-uni)  - user interface tests created for the testing website to learn about the handling of various web elements. Link to the [page](http://www.webdriveruniversity.com/).
+* [Web Driver Univeristy](https://github.com/jakubrylko/cypress-automation-framework/tree/main/cypress/e2e/webdriver-uni)  - user interface tests created for a test website to learn how to handle various web elements. Link to the [page](http://www.webdriveruniversity.com/).
 * [API Testing](https://github.com/jakubrylko/cypress-automation-framework/tree/main/cypress/e2e/json-server) - test test
 * [XHR Testing](https://github.com/jakubrylko/cypress-automation-framework/tree/main/cypress/e2e/xhr-testing) - test test
 * [Juice Shop](https://github.com/jakubrylko/cypress-automation-framework/tree/main/cypress/e2e/juice-shop) - test
