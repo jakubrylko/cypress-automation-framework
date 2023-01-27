@@ -2,21 +2,6 @@
 
 describe('Veryfing variables, cypress commands and jquery commands', () => {
     it('Navigating to specific product pages', () => {
-        // The following will fail
-        // cy.visit('https://www.automationteststore.com');
-        // const makeupLink = cy.get("a[href*='product/category&path=']").contains('Makeup');
-        // const skincareLink = cy.get("a[href*='product/category&path=']").contains('Skincare');
-        // makeupLink.click();
-        // skincareLink.click();
-
-        // The following will pass
-        // cy.visit('https://www.automationteststore.com');
-        // const makeupLink = cy.get("a[href*='product/category&path=']").contains('Makeup');
-        // makeupLink.click();
-        // const skincareLink = cy.get("a[href*='product/category&path=']").contains('Skincare');
-        // skincareLink.click();
-
-        // Recommended approach
         cy.visit('https://www.automationteststore.com');
         cy.get("a[href*='product/category&path=']").contains('Makeup').click();
         cy.get("a[href*='product/category&path=']").contains('Skincare').eq(0).click();
@@ -25,10 +10,6 @@ describe('Veryfing variables, cypress commands and jquery commands', () => {
     it('Navigating to makeup products page', () => {
         cy.visit('https://www.automationteststore.com');
         cy.get("a[href*='product/category&path=']").contains('Makeup').click();
-
-        // Following code will fail
-        // const header = cy.get('h1 > .maintext');
-        // cy.log(header.text());
 
         cy.get('h1 > .maintext').then(($headerText) => {
             const headerText = $headerText.text();
@@ -53,7 +34,7 @@ describe('Veryfing variables, cypress commands and jquery commands', () => {
             cy.get('#field_11').then(fnText => {
                 cy.log(fnText.text());
                 cy.log(fnText);
-            })
+            });
         });
     });
 });

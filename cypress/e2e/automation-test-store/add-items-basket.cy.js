@@ -5,7 +5,7 @@ import AsHairCare_PO from "../../support/page-objects/automation-store/as-hairca
 describe('Add multiple items to the basket', () => {
     const asHomepage_PO = new AsHomepage_PO();
     const asHairCare_PO = new AsHairCare_PO();
-    
+
     before(() => {
         cy.fixture("products").then(products => {
             globalThis.products = products;

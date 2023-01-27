@@ -1,28 +1,3 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import 'cypress-file-upload';
 
 Cypress.Commands.add('selectProduct', productName => {
@@ -61,4 +36,29 @@ Cypress.Commands.add('wduHomepage', () => {
 
 Cypress.Commands.add('wduCheckbox', () => {
     cy.visit('/Dropdown-Checkboxes-RadioButtons/index.html');
+});
+
+Cypress.Commands.add('currentDateTime', () => {
+    let currentDate = new Date();
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth() + 1;
+    let year = currentDate.getFullYear().toString().slice(-2);
+    let hour = currentDate.getHours();
+    let minutes = currentDate.getMinutes();
+    let seconds = currentDate.getSeconds();
+
+    if (day < 10) day = `0${day}`;
+    if (month < 10) month = `0${month}`;
+    if (hour < 10) hour = `0${hour}`;
+    if (minutes < 10) minutes = `0${minutes}`;
+    if (seconds < 10) seconds = `0${seconds}`;
+
+    let dateTime = `${day}${month}.${hour}${minutes}`;
+    return dateTime;
+});
+
+Cypress.Commands.add('goToLogin', () => {
+    cy.get('#navbarAccount').click();
+    cy.get('#navbarLoginButton').click();
+    cy.url().should('contain', 'login');
 });

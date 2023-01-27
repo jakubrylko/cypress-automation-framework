@@ -14,7 +14,7 @@ Feature: WebDriverUni Login Page
     #     And I enter password webdriver777
     #     And I click on the login button
     #     Then I should be presented with the following message validation failed
-   
+
     @login
     Scenario Outline: Test Login via WebDriverUni Login Portal
         Given I access the WebDriverUni Login Portal page

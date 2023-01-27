@@ -19,4 +19,15 @@ describe('Verify checkboxes via WebdriverUni', () => {
     it('Check multiple checkboxes', () => {
         cy.get('[type="checkbox"]').check().should('be.checked');
     });
+
+    /* ==== Test Created with Cypress Studio ==== */
+    it('Click all radio buttons', () => {
+        /* ==== Generated with Cypress Studio ==== */
+        cy.get('[value="green"]').check();
+        cy.get('[value="blue"]').check();
+        cy.get('[value="yellow"]').check();
+        cy.get('#radio-buttons > [value="orange"]').check();
+        cy.get('[value="purple"]').check();
+        /* ==== End Cypress Studio ==== */
+    });
 });

@@ -51,3 +51,7 @@ cypress/videos
 # Reports
 results/
 mochawesome-report/
+mochawesome.json
+
+# Config files
+package-lock.json
