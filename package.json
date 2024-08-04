@@ -24,7 +24,7 @@
   "author": "Jakub Rylko",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.2.0",
+    "cypress": "^13.3.3",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.6.2",
